@@ -10,5 +10,6 @@
   <employee dep_name="" name="" birth="" addr="" phone="" email="" exp="" pos="" sal="" photo="" />
   <employee dep_name="" name="" birth="" addr="" phone="" email="" exp="" pos="" sal="" photo="" />
   <employee dep_name="" name="" birth="" addr="" phone="" email="" exp="" pos="" sal="" photo="" />
-  <employee dep_name="Отдел маркетинга" name="Иванченко Мария" birth="воскресенье, 20 сентября 1970 г." addr="Киев" phone="0985643223" email="Ivanchenko@ukr.net" pos="Начальница" sal="3000" exp="12" photo="emp6.jpg" />
+  <employee dep_name="Отдел маркетинга" name="Иванченко Мария" birth="20.09.1970" addr="Киев" phone="0985643223" email="Ivanchenko@ukr.net" pos="Начальница" sal="3000" exp="12" photo="emp6.jpg" />
+  <employee dep_name="Отдел маркетинга" name="Пичкуров Василий" birth="11.06.1985" addr="Чернигов" phone="0968569123" email="Pichkurov@i.ua" pos="Ассистент менеджера" sal="1500" exp="3" photo="emp7.jpg" />
 </root>
