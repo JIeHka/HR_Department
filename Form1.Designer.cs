@@ -29,6 +29,7 @@ namespace HR_Department
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.empList = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -219,6 +220,7 @@ namespace HR_Department
             this.empDel.TabIndex = 18;
             this.empDel.Text = "Удалить";
             this.empDel.UseVisualStyleBackColor = true;
+            this.empDel.Click += new System.EventHandler(this.empDel_Click);
             // 
             // empSave
             // 
@@ -229,6 +231,7 @@ namespace HR_Department
             this.empSave.TabIndex = 17;
             this.empSave.Text = "Сохранить";
             this.empSave.UseVisualStyleBackColor = true;
+            this.empSave.Click += new System.EventHandler(this.empSave_Click);
             // 
             // empAdd
             // 
@@ -348,7 +351,6 @@ namespace HR_Department
             this.empBirth.Name = "empBirth";
             this.empBirth.Size = new System.Drawing.Size(225, 25);
             this.empBirth.TabIndex = 3;
-            this.empBirth.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label5
             // 
@@ -398,6 +400,7 @@ namespace HR_Department
             this.photoDel.TabIndex = 9;
             this.photoDel.Text = "Удалить фотографию";
             this.photoDel.UseVisualStyleBackColor = true;
+            this.photoDel.Click += new System.EventHandler(this.photoDel_Click);
             // 
             // photoAdd
             // 
@@ -439,8 +442,9 @@ namespace HR_Department
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Автоматизированная система управления отделом кадров";
