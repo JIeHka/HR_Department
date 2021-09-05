@@ -136,14 +136,21 @@ namespace HR_Department
         }
         private void photoAdd_Click(object sender, EventArgs e)
         {
+
+            var emps = doc2.Element("root").Elements("employee")
+                .Where(x => x.Attribute("name").Value == empList.SelectedItem.ToString()).FirstOrDefault();
+           
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Jpeg Files (*.jpg)|*.jpg|Png Files (*.png)|*.png|All Files (*.*)|*.*";
-            if (ofd.ShowDialog()==DialogResult.OK)
-            {
-                photoPath = ofd.FileName;
-                photoName = ofd.SafeFileName;
-                empPhoto.Image = Image.FromFile(photoPath);
+                ofd.Filter = "Jpeg Files (*.jpg)|*.jpg|Png Files (*.png)|*.png|All Files (*.*)|*.*";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    photoPath = ofd.FileName;
+                    photoName = ofd.SafeFileName;
+                    empPhoto.Image = Image.FromFile(photoPath);
+                emps.Attribute("photo").Value = photoName.ToString();
+                doc2.Save(path2);
             }
+
         }
         private void clearFields_Click(object sender, EventArgs e)
         {
@@ -228,7 +235,6 @@ namespace HR_Department
             string ePosition = empPosition.Text;
             string eExperience = empExperience.Text;
             string eSalary = empSalary.Text;
-            string ePhoto = photoName;
             var emps = doc2.Element("root").Elements("employee")
                 .Where(x => x.Attribute("name").Value == oldName).FirstOrDefault();
             emps.Attribute("name").Value = eName.ToString();
@@ -240,13 +246,7 @@ namespace HR_Department
             emps.Attribute("pos").Value = ePosition.ToString();
             emps.Attribute("sal").Value = eSalary.ToString();
             empList.Items.Remove(oldName);
-            empList.Items.Add(eName);       
-            string path = @"..\..\Images\" + ePhoto;
-            if (!File.Exists(path))
-            {
-                File.Copy(photoPath, path);
-            }
-            emps.Attribute("photo").Value = ePhoto.ToString();
+            empList.Items.Add(eName);
             doc2.Save(path2);
             MessageBox.Show("Данные успешно изменены", "Сообщение",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -278,3 +278,4 @@ namespace HR_Department
         }
     }
 }
+

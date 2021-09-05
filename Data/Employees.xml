@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <employee dep_name="Компьютерный отдел" name="Ничипоренко Александр" birth="27.08.1988" addr="Луганск" phone="0972856482" email="Nichiporenko@ukr.net" exp="6" pos="Админ" sal="2500" photo="emp1.jpg" />
-  <employee dep_name="Компьютерный отдел" name="Невгад Маргарита" birth="05.06.1987" addr="Симферополь" phone="0956593625" email="Nevgad@ukr.net" exp="5" pos="Кодер" sal="2800" photo="emp2.jpg" />
+  <employee dep_name="Компьютерный отдел" name="Невгад Маргарита" birth="05.06.1987" addr="Симферополь" phone="0956593623" email="Nevgad@ukr.net" exp="5" pos="Кодер" sal="2800" photo="emp8.jpg" />
   <employee dep_name="Финансовый отдел" name="Манжос Светлана" birth="02.01.1985" addr="Сумы" phone="0995671254" email="Manzhos@ukr.net" exp="2" pos="Бухгалтер" sal="2200" photo="emp3.jpg" />
   <employee dep_name="Финансовый отдел" name="Нетименко Наталия" birth="03.04.1970" addr="Киев" phone="0932358963" email="Netimenko@ukr.net" exp="10" pos="Менеджер" sal="2100" photo="emp4.jpg" />
   <employee dep_name="" name="" birth="" addr="" phone="" email="" exp="" pos="" sal="" photo="" />
